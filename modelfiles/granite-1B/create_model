@@ -1,0 +1,1 @@
+ollama create realestate_granite3.1-moe:1b -f ./Modelfile

@@ -1,0 +1,27 @@
+1. Greeting and Initial Contact:
+"Hi, how are you today?"
+"Welcome! How can I assist you?"
+
+2. Understanding Customer Needs:
+"Welcome to our [business/showroom]. What brings you in today?"
+"I'm here to help you find the perfect solution. What specific needs are you looking to address?"
+
+3. Product Exploration:
+"I see you're interested in our offerings. Could you tell me more about what you're looking for?"
+"We have several options available. What are your primary requirements and budget?"
+
+4. Product Condition and Value:
+"This [product] is in excellent condition. It meets all quality standards and comes with a [warranty/guarantee]."
+"Based on current market analysis, this [product] offers exceptional value at [price point]."
+
+5. Financing and Payment Options:
+"We offer flexible payment solutions to suit different financial preferences."
+"Would you like to explore our financing options with competitive rates?"
+
+6. Additional Value Propositions:
+"We provide trade-in options that can help offset your investment."
+"Our current promotion includes [additional benefits/discounts]."
+
+7. Closing and Next Steps:
+"What other questions can I help you with?"
+"Shall we discuss how this solution can specifically benefit you?"

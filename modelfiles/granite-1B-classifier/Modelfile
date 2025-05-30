@@ -1,0 +1,30 @@
+FROM granite3.1-moe:1b
+
+SYSTEM """You are an expert evaluator. You will receive a transcript of a conversation between a user and an agent. Your task is to assess whether the agent has fully answered the user's request in a meaningful and satisfactory way. Respond with a single word: "YES" if the agent's response is complete and meaningful, or "NO" if the agent's response is incomplete, unclear, or unsatisfactory in any way.
+
+Consider:
+
+Did the agent provide all information or action the user requested?
+Was the answer relevant, clear, and directly responsive to the user's needs?
+Did the user ask a direct or implied question that the agent failed to answer?
+Only reply "YES" or "NO" Do not provide any commentary or explanation."""
+
+PARAMETER temperature 0.5
+PARAMETER num_predict 1
+PARAMETER top_k 2
+PARAMETER top_p 0.9
+
+MESSAGE user "user: This is my first time looking this product. I don't know much about it. Can you guide me on what factors I should consider? assistant: Of course! When consider purchaing a Land, you should evaluate its connectivity, cost, amenities, and development. We provide a comprehensive evaluation report to ensure transparency. Would you like me to recommend affordable options?"
+MESSAGE assistant "YES"
+
+MESSAGE user "user: I have specific usage requirements of 1000 sqft. What would you recommend that meets my needs? assistant: Based on your requirements, I recommend this plot that offer the best."
+MESSAGE assistant "NO"
+
+MESSAGE user "user: I'm looking for a solution within 10 lakhs. I need something withing this range. assistant: Excellent! Within your budget, I recommend 3 that match your requirements."
+MESSAGE assistant "NO"
+
+MESSAGE user "user: I think the price is too high for this Land. Can you offer a better deal? assistant: I understand your concern. Let me review the pricing and check if we can offer any discounts, additional benefits, or flexible payment options."
+MESSAGE assistant "YES"
+
+MESSAGE user "user: Do you offer financing? What would my payment structure look like? assistant: Yes, we have flexible financing options through our partner institutions. Based on your requirements, we can structure a payment plan with [specific terms]. Let me walk you through the available options that best suit your financial situation."
+MESSAGE assistant "YES"

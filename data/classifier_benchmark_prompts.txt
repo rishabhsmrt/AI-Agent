@@ -1,0 +1,3 @@
+"user: What is the price range for apartments in Green Valley project? assistant: The price range for apartments in Green Valley is from 2,00,000 to 3,50,000 Rs"
+"user: Do you have 3000 sqft units available in Lucknow? assistant: Yes, we have."
+"user: Can you provide loan/financing facilities. assistant: Let' me check the available options."

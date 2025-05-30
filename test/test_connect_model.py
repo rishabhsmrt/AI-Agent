@@ -2,9 +2,9 @@ import sys, os
 from datetime import datetime
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-from modules.connect_model import model_response
+from modules.LLM import generate_response
 
-def save_benchmark_prompts(folder_name, file_name, prompt, response):
+def save_benchmark_prompts(folder_name, file_name, prompt, response, model):
 
     current_dir = os.getcwd()
     
@@ -23,17 +23,17 @@ def save_benchmark_prompts(folder_name, file_name, prompt, response):
     
     # Write "hello world" to the file
     with open(file_path, 'w') as file:
-        file.write(f"sales-person : {prompt} \ncustomer : {response} \n")
+        file.write(f"Prompt : {prompt} \nResponse : {response} \n")
     
+if __name__ == "__main__":
 
-models = ["finetune_granite3.1-moe:1b"]
+    models = ["finetune_granite3.1-moe:1b"]
 
-benchmark_prompts = open("../data/benchmark_prompts.txt", "r")
-
-for prompt in benchmark_prompts:
-    for model in models:
-        response = model_response(prompt, model)
-        save_benchmark_prompts(model, datetime.now().strftime("%Y%m%d_%H%M%S"), prompt, response)
+    benchmark_prompts = open("../data/benchmark_prompts.txt", "r")
+    for prompt in benchmark_prompts:
+        for model in models:
+            response = generate_response(prompt, model)
+            save_benchmark_prompts(model, datetime.now().strftime("%Y%m%d_%H%M%S"), prompt, response, model)
 
 
 
